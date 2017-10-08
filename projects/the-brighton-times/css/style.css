@@ -1,0 +1,883 @@
+/*------------------------------------------------------------------------
+:: GRID
+-------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 0 1%;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 0 1%;
+}
+
+/*------------------------------------------------------------------------
+:: COMMON SETUP
+-------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #424242;
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-weight: 300;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+.header,
+.main-article,
+.top-news,
+.sports-scores,
+.weather-news,
+.latest-news { 
+    margin-bottom: 20px; 
+}
+
+p,
+a {
+    font-size: 0.8em;
+    line-height: 125%;
+}
+
+h2 { 
+    font-size: 1.15em;
+    font-weight: 400;
+    padding-bottom: 2%; 
+}
+
+.hidden-text-sm-screen { display: none; }
+
+.block-ellipsis {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*------------------------------------------------------------------------
+:: HEADER
+-------------------------------------------------------------------------*/
+
+.header {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.header-row {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.header-logo,
+.header-title,
+.header-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header-button {
+    font-size: 1.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;  
+    padding-right: 7%;
+    color: #616161;
+}
+
+.header-logo img {
+    width: auto;
+    height: 72px;
+    margin: 10px;
+}
+
+.header-title h1 {
+    padding-left: 3%;
+    font-size: 1em;
+    text-align: center;
+}
+
+#drawer {
+    margin-left: -15px;
+    padding: 10%;
+}
+
+nav {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #e0e0e0;
+    box-shadow: 1px 1px 1px #e0e0e0;
+    -webkit-transform: translate(-250px, -0);
+    transform: translate(-250px, -0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease; 
+}
+    
+nav li {
+    padding: 20%;
+    text-transform: uppercase;
+}
+
+nav.open {
+    visibility: visible;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); 
+}
+
+nav a:link,
+nav a:visited {
+    color: #616161;
+}
+
+nav a:hover,
+nav a:active {
+    border-bottom: 1px solid #c0392b;
+    padding-bottom: 5px;
+}
+
+.main-article-ellipsis {
+    -webkit-line-clamp: 3;
+    height: 60px; 
+}
+
+/*------------------------------------------------------------------------
+:: MAIN ARTICLE
+-------------------------------------------------------------------------*/
+
+/* TODO: replace large hero for smaller one */
+
+.main-article {
+    position: relative;
+    height: 350px;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+}
+
+.main-acticle-intro {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    height: 40%;
+    padding: 2%;
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------
+:: TOP NEWS
+-------------------------------------------------------------------------*/
+
+.top-news-header {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    padding-bottom: 4%;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.read-more {
+    float: right;
+    padding: 19px;
+}
+
+.read-more:link,
+.read-more:visited {
+    color: #616161;
+}
+
+.read-more:hover,
+.read-more:active {
+    border-bottom: 1px solid #c0392b;
+    padding-bottom: 18px;
+}
+
+.top-news-featured li {
+    padding: 5% 0;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.top-news-snippet:link,
+.top-news-snippet:visited {
+    color: #616161;
+}
+
+.top-news-snippet:hover,
+.top-news-snippet:active {
+    border-bottom: 1px solid #c0392b;
+}
+
+/*------------------------------------------------------------------------
+:: SPORTS SCORES
+-------------------------------------------------------------------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+}
+
+
+.sports-scores-sm {
+    display: none;
+}
+
+.sports-results th,
+.sports-results td {
+    padding: 5% 1.2%;
+}
+
+.sports-results th {
+    background-color: #78909C;
+    color: #fff;
+    font-weight: 300;
+}
+
+.sports-results tr:nth-child(even) td {
+    background-color: #ecf0f5;
+}
+
+.sports-results td:nth-child(4) {
+    text-align: right;
+}
+
+.sports-results td:nth-child(2),
+.sports-results td:nth-child(3),
+.sports-results td:nth-child(6) {
+    text-align: center;
+}
+
+.sports-winner {
+    font-weight: 500;
+}
+
+/*------------------------------------------------------------------------
+:: WEATHER NEWS
+-------------------------------------------------------------------------*/
+   
+.weather-title span {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.weather-today,
+.weather-forecast ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.weather-today {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 5%;
+}
+
+.weather-today img {
+    float: right;
+}
+
+.weather-today span {
+    float: left;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.weather-forecast ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.weather-forecast li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 4%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/*------------------------------------------------------------------------
+:: LATEST NEWS
+-------------------------------------------------------------------------*/
+
+.latest-news-header {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    padding-bottom: 4%;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.col-sm-fx {
+    width: 33.33%;
+}
+
+.col-med-fx {
+    width: 66.66%;
+}
+
+.col-larg-fx {
+    width: 100.00%;
+}
+
+.col-sm-fx,
+.col-med-fx,
+.col-larg-fx {
+    padding: 0 1%;
+}
+
+.latest-news-snippet {
+    padding: 5% 0;
+}
+
+.latest-news-img,
+.latest-news-heading,
+.latest-news-text {
+    display: block;
+    float: left;
+}
+
+.latest-news-img img { display: none; }
+
+.latest-news-heading a:link,
+.latest-news-heading a:visited {
+    color: #616161;
+}
+
+.latest-news-heading a:hover,
+.latest-news-heading a:active {
+    border-bottom: 1px solid #c0392b;
+}
+
+.latest-news-text {
+    padding: 5% 0 10% 0;
+}
+
+.latest-news-ellipsis { 
+    height: 100px;
+    -webkit-line-clamp: 5;
+}
+
+/*------------------------------------------------------------------------
+:: FOOTER
+-------------------------------------------------------------------------*/
+
+.footer {
+    padding-top: 5%;
+    border-top: 1px solid #e0e0e0; 
+}
+
+.footer-local-links,
+.footer-social-links,
+.footer-copyright-notice {
+    text-align: center;
+    padding: 5% 0;
+}
+
+.footer-local-links li,
+.footer-social-links li {
+    display: inline-block;
+}
+
+.footer-local-links a:link,
+.footer-local-links a:visited,
+.footer-social-links a:link,
+.footer-social-links a:visited {
+    color: #616161;
+    padding: 13px;
+}
+
+.footer-local-links a:hover,
+.footer-local-links a:active {
+    border-bottom: 1px solid #c0392b;
+}
+
+.footer-social-links a {
+    font-size: 1em;
+}
+
+.fa-facebook:hover,
+.fa-facebook:active {
+    color: #3b5998;
+}
+
+.fa-twitter:hover,
+.fa-twitter:active {
+    color: #00aced;
+}
+
+.fa-google-plus:hover,
+.fa-google-plus:active {
+    color: #dd4b39;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+    color: #517fa4;
+}
+
+.footer-copyright-notice {
+    padding: 5% 0;
+    font-size: 0.9em;
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 421px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 421px) {
+
+    /* ------- COMMON SETUP ------- */
+ 
+    .hidden-text-sm-screen { display: inline; }
+    
+    /* ------- HEADER ------- */
+    
+    .header-title h1 { width: 200px; }
+    
+    /* ------- MAIN ARTICLE ------- */
+    
+    .main-acticle-intro { height: 35%; }
+    
+    /* ------- WEATHER NEWS ------- */
+
+    .weather-forecast li { padding: 7%; }
+
+    /* ------- LATEST NEWS ------- */
+    
+    .col-sm-fx { width: 41.66%; }
+
+    .col-med-fx { width: 58.33%; }
+
+    .latest-news-heading { margin-top: 6%; }
+    
+    .latest-news-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* ------- FOOTER ------- */
+
+    .footer-local-links,
+    .footer-social-links,
+    .footer-copyright-notice {
+        padding: 35px 0;
+    }
+
+    .footer-social-links a { font-size: 1.2em; }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 571px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 571px) {
+    
+    /* ------- HEADER ------- */
+    
+    .header-title h1 { 
+        font-size: 1.5em; 
+        width: 300px;
+    }
+    
+    /* ------- TOP NEWS ------- */
+
+    .top-news-header { padding-bottom: 2%; }
+
+    .top-news-featured li { padding: 3% 0;}
+    
+    /* ------- SPORTS SCORES ------- */
+    
+    .sports-results th,
+    .sports-results td {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .sports-scores-sm {
+        display: table-cell;
+    }
+
+    /* ------- WEATHER NEWS ------- */
+    
+    .weather-forecast li { padding: 3%; }
+
+    /* ------- LATEST NEWS ------- */
+    
+    .col-sm-fx { width: 50%; }
+
+    .col-med-fx { width: 50%; }
+    
+    .latest-news-heading { margin-top: 10%;}
+    
+    .latest-news-header { padding-bottom: 2%; }
+    
+    h3 { font-size: 1.4em; }
+
+    /* ------- FOOTER ------- */
+
+    .footer { padding-top: 2%; }
+    
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 761px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 761px ) {
+    
+    /* ------- GRID ------- */
+ 
+    .col-1 {
+        -webkit-flex-basis: 8.33%;
+        -ms-flex-preferred-size: 8.33%;
+        flex-basis: 8.33%;
+        max-width: 8.33%;
+    }
+
+    .col-2 {
+        -webkit-flex-basis: 16.66%;
+        -ms-flex-preferred-size: 16.66%;
+        flex-basis: 16.66%;
+        max-width: 16.66%;
+    }
+
+    .col-3 {
+        -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .col-4 {
+        -webkit-flex-basis: 33.33%;
+        -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .col-5 {
+        -webkit-flex-basis: 41.66%;
+        -ms-flex-preferred-size: 41.66%;
+        flex-basis: 41.66%;
+        max-width: 41.66%;
+    }
+
+    .col-6 {
+        -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col-7 {
+        -webkit-flex-basis: 58.33%;
+        -ms-flex-preferred-size: 58.33%;
+        flex-basis: 58.33%;
+        max-width: 58.33%;
+    }
+
+    .col-8 {
+        -webkit-flex-basis: 66.66%;
+        -ms-flex-preferred-size: 66.66%;
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+
+    .col-9 {
+        -webkit-flex-basis: 75%;
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+        max-width: 75%;
+    }
+
+    .col-10 {
+        -webkit-flex-basis: 83.33%;
+        -ms-flex-preferred-size: 83.33%;
+        flex-basis: 83.33%;
+        max-width: 83.33%;
+    }
+
+    .col-11 {
+        -webkit-flex-basis: 91.66%;
+        -ms-flex-preferred-size: 91.66%;
+        flex-basis: 91.66%;
+        max-width: 91.66%;
+    }
+    
+    /* ------- COMMON SETUP ------- */
+   
+    .main-article { -webkit-box-ordinal-group: 1; -webkit-order: 0; -ms-flex-order: 0; order: 0; }
+    
+    .top-news { -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; }
+    
+    .sports-scores { -webkit-box-ordinal-group: 4; -webkit-order: 3; -ms-flex-order: 3; order: 3; }
+    
+    .weather-news { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+    
+    .latest-news  { -webkit-box-ordinal-group: 5; -webkit-order: 4; -ms-flex-order: 4; order: 4; }
+    
+    .header,
+    .main-article,
+    .top-news,
+    .sports-scores,
+    .weather-news,
+    .latest-news { 
+        margin-bottom: 40px; 
+    }
+    
+    /* ------- HEADER ------- */
+
+    .header-title { 
+        -webkit-box-pack: center; 
+        -webkit-justify-content: center; 
+        -ms-flex-pack: center; 
+        justify-content: center; 
+        -webkit-flex-basis: 50%; 
+        -ms-flex-preferred-size: 50%; 
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    
+    .header-title h1 { 
+       width: 100%;
+       font-size: 2em;
+    }
+    
+    .header-button {
+        display: none;
+    }
+    
+    #drawer {
+        margin-left: 0;
+        padding: 1%;
+    }
+
+    nav {
+        visibility: visible;
+        position: relative;
+        height: auto;
+         -webkit-transform: none;
+        transform: none;
+        background-color: #fff;
+        box-shadow: none;
+        text-align: center;
+        -webkit-transition: none;
+        transition: none;
+    }
+ 
+    nav ul {
+        margin-left: 2%
+    } 
+    
+    nav li {
+        display: inline-block;
+        padding: 1% 3%;
+    } 
+    
+    /* ------- WEATHER NEWS ------- */
+
+    .weather-today { padding: 3%; }
+
+    .weather-forecast ul { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+
+    .weather-forecast li { padding: 0%; }
+
+    .weather-forecast li img { width: 60px; }
+    
+    /* ------- TOP NEWS ------- */
+    
+    .top-news,
+    table {
+        height: 350px;
+    }
+    
+    .top-news-featured li { height: 70px; }
+ 
+    /* ------- SPORTS SCORES ------- */
+
+    .sports-results thead th,
+    .sports-results thead  tr {
+        padding: 23px;
+    }
+    
+    /* ------- LATEST NEWS ------- */
+
+    .col-sm-fx {
+        width: 33.33%;
+    }
+
+    .col-med-fx,
+    .col-larg-fx {
+        width: 66.66%;
+    }
+  
+    .latest-news-heading { margin-top: 0;}
+
+    .hidden-text-med-screen { display: none;}
+
+    .latest-news-text { padding: 3% 0 10% 1%; }
+    
+    /* ------- FOOTER ------- */
+
+    .footer-local-links { text-align: left;}
+    
+    .footer-social-links { text-align: right; }
+    
+    .footer-local-links,
+    .footer-social-links {
+        padding: 1%;
+    }
+    
+    .footer-social-links:last-child { padding-left: 0; }
+   
+    .footer-social-links a { font-size: 1.2em; }
+  
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 893px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 893px) {
+    
+    /* ------- WEATHER NEWS ------- */
+    
+    .weather-forecast li { padding: 1%; }
+    
+    /* ------- LATEST NEWS ------- */
+  
+    .hidden-text-med-screen {
+        display: inline;
+    }
+    
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 1140px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1140px) {
+    
+    /* ------- COMMON SETUP ------- */
+   
+    .main-article { -webkit-box-ordinal-group: 1; -webkit-order: 0; -ms-flex-order: 0; order: 0; }
+
+    .top-news { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+
+    .sports-scores { -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; }
+
+    .weather-news { -webkit-box-ordinal-group: 4; -webkit-order: 3; -ms-flex-order: 3; order: 3; }
+
+    .latest-news  { -webkit-box-ordinal-group: 5; -webkit-order: 4; -ms-flex-order: 4; order: 4; }
+    
+    /* ------- GRID ------- */
+    
+    .container { 
+        width: 1140px;
+        margin: 0 auto;
+    }
+    
+     /* ------- WEATHER NEWS ------- */
+    
+    .weather-forecast li { padding: 3%; }
+        
+}

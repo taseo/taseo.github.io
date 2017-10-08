@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frogger Clone</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Arcade game project based on Udacity's Javascript course">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#2c3e50">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-79840089-1" async></script>      
+    
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-79840089-1');
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <div class="twelve">
+          <h1>Frogger Clone</h1>
+          <span class="introduction">Arcade game project based on Udacity's Javascript <a href="https://www.udacity.com/course/object-oriented-javascript--ud015" target="_blank">course</a></span>
+        </div>
+      </header>
+      
+      <section class="row">
+        <div class="game-menu">
+          <div class="row">
+            <div class="six level-bar">
+              <div>Current Level: <span id="level">1</span></div>
+              <div>Your Highest Level: <span id="highest-level">1</span></div>
+            </div>
+            <div class="six hp-bar">
+              <ul>
+                <li><i class="hit-point-block fa fa-heart" aria-hidden="true"></i></li>
+                <li><i class="hit-point-block fa fa-heart" aria-hidden="true"></i></li>
+                <li><i class="hit-point-block fa fa-heart" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="row relative">
+        <div id="help-message">Choose your champion using left and right arrow keys, press enter to select</div>
+        <a id="reset-button">Reset Game</a>
+      </section>
+      
+      <section id="canvas" class="row"></section>
+      
+      <footer>
+        <div class="row">
+          <p>Game's source code can be found on <a href="https://github.com/taseo/frogger-clone" target="_blank">GitHub</a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+  </body>
+</html>

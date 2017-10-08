@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.container {
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%; }
+
+.row {
+  clear: both;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+.six,
+.twelve {
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.six {
+  width: 50%; }
+
+.twelve {
+  width: 100%; }
+
+.relative {
+  position: relative; }
+
+body {
+  color: #2c3e50;
+  font-family: "Inconsolata", monospace;
+  font-size: 25px;
+  text-align: center;
+  text-rendering: geometricPrecision; }
+
+h1 {
+  font-size: 4rem;
+  margin: 1% 0; }
+
+.introduction {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 1%; }
+
+a {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  color: #2db2e1; }
+  a:hover {
+    border-bottom: 1px solid #16a085;
+    color: #16a085; }
+
+.game-menu {
+  border-color: #7f8c8d;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  float: none;
+  height: 80px;
+  margin: 0 auto;
+  width: 80%; }
+
+.level-bar {
+  font-size: 1.2rem;
+  height: 60px;
+  line-height: 30px;
+  margin: 10px auto; }
+
+.hp-bar {
+  font-size: 2rem;
+  height: 80px;
+  line-height: 80px; }
+  .hp-bar ul {
+    margin: 0;
+    padding: 0; }
+  .hp-bar li {
+    display: inline-block; }
+
+.fa-heart,
+.fa-heart-o {
+  color: #c0392b; }
+
+#help-message {
+  border-color: #c2c6d6;
+  border-style: solid;
+  border-width: 1px;
+  background: #f0f1f5;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%; }
+
+#reset-button {
+  border-color: #1abc9c;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  color: #1abc9c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 10px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 2; }
+  #reset-button:hover {
+    border-color: #117964;
+    border-style: solid;
+    border-width: 2px;
+    background: #117964;
+    color: #ecf0f1; }
+  #reset-button:active {
+    border-color: #0e6352;
+    border-style: solid;
+    border-width: 2px;
+    background: #0e6352; }
+
+footer p {
+  font-size: 1rem; }

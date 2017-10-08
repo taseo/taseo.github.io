@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  padding-left: $grid-whitespace;
+  padding-right: $grid-whitespace;
+  width: 100%;
+}
+
+.row {
+  clear: both;
+  margin-left: $grid-whitespace * -1;
+  margin-right: $grid-whitespace * -1;
+}
+
+
+.six,
+.twelve {
+  float: left;
+  padding-left: $grid-whitespace;
+  padding-right: $grid-whitespace;
+}
+
+.six { width: 50%; }
+
+.twelve { width: 100%; }
+
+.relative { position: relative; }

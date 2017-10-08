@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Brighton Times</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Front page for fictional local news site that uses responsive layout (mobile-first) and flexbox to position elements; original design is based on Udacity's course">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-79840089-1" async></script>      
+    
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-79840089-1');
+    </script> 
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="header">
+        <div class="header-row row"> 
+          <div class="header-logo col-3">
+            <img src="img/logo.png" alt="Iconic view of a cityscape as The Brighton Times logo">
+          </div>
+          <div class="header-title col-7">
+            <h1>The Brighton Times</h1>
+          </div>
+          <div class="header-button col-2">
+            <i id="menu" class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div> 
+        <div class="header-navigation row">
+          <div class="col-12">
+            <nav id="drawer">
+              <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="row">
+
+        <section class="main-article col-7">
+          <div class="row">
+            <div class="main-acticle-intro col-12">
+              <h2>Absolutely astonishing breaking news</h2>
+              <p class="block-ellipsis main-article-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+            </div>
+          </div>        
+        </section>
+
+        <section class="top-news col-5">
+          <div class="top-news-header row">
+            <div class="col-8">
+              <h2>Top news</h2>
+            </div>
+            <div class="col-4">
+              <a class="read-more" href="#">&#43;more</a>
+            </div>
+          </div>
+          <div class="top-news-featured row">
+            <div class="col-12">
+              <ul>
+                <li><a class="top-news-snippet" href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a></li>
+                <li><a class="top-news-snippet" href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a></li>
+                <li><a class="top-news-snippet" href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a></li>
+                <li><a class="top-news-snippet" href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="sports-scores col-7">
+          <table class="sports-results">
+            <thead class="sports-table-header">
+              <tr>
+                <th>Date</th>
+                <th class="sports-scores-sm">Location</th>
+                <th>Team</th>
+                <th colspan="2">Score</th>
+                <th>Team</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td class="sports-scores-sm">Brighton</td>
+                <td>Bears</td>
+                <td>95</td>
+                <td class="sports-winner">109</td>
+                <td class="sports-winner">Cubs</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td class="sports-scores-sm">Worthington</td>
+                <td class="sports-winner">Otters</td>
+                <td class="sports-winner">3</td>
+                <td>1</td>
+                <td>Cubs</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td class="sports-scores-sm">Littlehampton</td>
+                <td class="sports-winner">Wolves</td>
+                <td class="sports-winner">7</td>
+                <td>0</td>
+                <td>Panthers</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td class="sports-scores-sm">Portslade</td>
+                <td>Hawks</td>
+                <td>11</td>
+                <td class="sports-winner">12</td>
+                <td class="sports-winner">Capons</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td class="sports-scores-sm">Hove</td>
+                <td class="sports-winner">Stags</td>
+                <td class="sports-winner">6</td>
+                <td>2</td>
+                <td>Foxes</td>
+              </tr>             
+            </tbody>
+          </table>
+        </section>
+
+        <section class="weather-news col-5">
+          <div class="weather-title row">
+            <div class="col-12">
+              <h2>Brighton, UK</h2>
+              <span>Sunny</span>
+            </div>
+          </div>
+          <div class="weather-today row">
+            <div class="col-6">
+              <img src="img/weather.png" alt="Weather icon of a partially sunny day">
+            </div>
+            <div class="col-6">
+              <span>13 &deg;C</span>
+            </div>
+          </div>
+          <div class="weather-forecast row">
+            <div class="col-12">
+              <ul>
+                <li>
+                  <span>Mon</span>
+                  <img src="img/sunny.png" alt="Weather icon of a sunny day">
+                  <span>13 &deg;C</span>
+                </li>
+                <li>
+                  <span>Tue</span>
+                  <img src="img/cloudy.png" alt="Weather icon of a cloudy day">
+                  <span>10 &deg;C</span>
+                </li>
+                <li>
+                  <span>Wed</span>
+                  <img src="img/cloudy.png" alt="Weather icon of a cloudy day">
+                  <span>9 &deg;C</span>
+                </li>
+                <li>
+                  <span>Thu</span>
+                  <img src="img/rain.png" alt="Weather icon of a rainy day">
+                  <span>7 &deg;C</span>
+                </li>
+                <li>
+                  <span>Fri</span>
+                  <img src="img/sunny.png" alt="Weather icon of a sunny day">
+                  <span>12 &deg;C</span>
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </section>
+
+        <section class="latest-news col-12">
+
+          <div class="latest-news-header row">
+            <div class="col-8">
+              <h2>Top news</h2>
+            </div>
+            <div class="col-4">
+              <a class="read-more" href="#">&#43;more</a>
+            </div>
+          </div>
+
+          <div class="latest-news-snippet row-float">
+            <div class="latest-news-img col-sm-fx">
+              <img src="img/news1.jpg" alt="Headphones connected to a mobile phone and placed on a table">
+            </div>
+            <div class="latest-news-heading col-med-fx">
+              <h3><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
+            </div>
+            <div class="latest-news-text col-larg-fx">
+              <p class="block-ellipsis latest-news-ellipsis">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim. Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.</p>
+            </div>
+          </div>
+
+          <div class="latest-news-snippet row-float">
+            <div class="latest-news-img col-sm-fx">
+              <img src="img/news2.jpg" alt="Open office space">
+            </div>
+            <div class="latest-news-heading col-med-fx">
+              <h3><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
+            </div>
+            <div class="latest-news-text col-larg-fx">
+              <p class="block-ellipsis latest-news-ellipsis">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim. Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.</p>
+            </div>
+          </div>
+
+          <div class="latest-news-snippet row-float">
+            <div class="latest-news-img col-sm-fx">
+              <img src="img/news3.jpg" alt="Bowl full of salad made of green leafes">
+            </div>
+            <div class="latest-news-heading col-med-fx">
+              <h3><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
+            </div>
+            <div class="latest-news-text col-larg-fx">
+              <p class="block-ellipsis latest-news-ellipsis">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim. Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.</p>
+            </div>
+          </div>
+
+          <div class="latest-news-snippet row-float">
+            <div class="latest-news-img col-sm-fx">
+              <img src="img/news4.jpg" alt="Open notebook next to a laptop on a table">
+            </div>
+            <div class="latest-news-heading col-med-fx">
+              <h3><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
+            </div>
+            <div class="latest-news-text col-larg-fx">
+              <p class="block-ellipsis latest-news-ellipsis">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim. Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+
+        <div class="footer-links row">
+          <div class="footer-local-links col-6">
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+          </div>
+          <div class="footer-social-links col-6">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="footer-copyright-notice col-12">
+            <p>Copyright &copy; 2016 by The Brighton Times. All rights reserved.</p>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

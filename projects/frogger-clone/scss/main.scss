@@ -1,0 +1,115 @@
+// Components
+
+@import 'components/variables';
+@import 'components/mixins';
+@import 'components/reset';
+@import 'layout/grid';
+
+// Main style
+
+body {
+  color: $base-font-color;
+  font-family: $font-family;
+  font-size: $base-font-size;
+  text-align: center;
+  text-rendering: geometricPrecision;
+}
+
+// Header and links
+
+h1 {
+  font-size: 4rem;
+  margin: 1% 0;
+}
+
+.introduction {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+
+a {
+  @include base-border($transparent);
+  color: $base-link-color;
+
+  &:hover {
+    border-bottom: 1px solid $base-link-hover-color;
+    color: $base-link-hover-color;
+  }
+}
+
+// Game menu and help message
+
+.game-menu {
+  @include base-border($base-border-color);
+  border-radius: 20px;
+  float: none;
+  height: $game-menu-height;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.level-bar {
+  font-size: 1.2rem;
+  height: $game-menu-height - 20px;
+  line-height: 30px;
+  margin: 10px auto;
+}
+
+.hp-bar {
+  font-size: 2rem;
+  height: $game-menu-height;
+  line-height: $game-menu-height;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li { display: inline-block; }
+}
+
+.fa-heart,
+.fa-heart-o {
+  color: $hp-icon-color;
+}
+
+#help-message {
+  @include base-border($help-message-border-color);
+  background: $help-message-color;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%;
+}
+
+#reset-button {
+  @include button-border($button-primary-color);
+  border-radius: 10px;
+  color: $button-primary-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 10px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 2;
+
+  &:hover {
+    @include button-border($button-hover-color);
+    background: $button-hover-color;
+    color: $font-color-white;
+  }
+
+  &:active {
+    @include button-border($button-active-color);
+    background: $button-active-color;
+  }
+}
+
+// Footer
+
+footer p { font-size: 1rem; }

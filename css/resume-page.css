@@ -1,0 +1,1484 @@
+/*------------------------------------------------------------------------
+:: GRID
+-------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0 20px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+/*------------------------------------------------------------------------
+:: COMMON SETUP
+-------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #2c3e50;
+    text-rendering: geometricPrecision;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+button::-moz-focus-inner { border: 0; }
+
+.education,
+.courses-online,
+.employment,
+.skills,
+.projects,
+.map {
+    margin: 10px 0;
+}
+
+.footer { margin: 20px 0 100px 0; }
+
+.edu-header,
+.courses-online-header,
+.employment-header,
+.skills-header,
+.projects-header,
+.map-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.divider { display: none; }
+
+/*------------------------------------------------------------------------
+:: NAVIGATION
+-------------------------------------------------------------------------*/
+
+.scroll-up-hidden { display: none; }
+
+.scroll-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+}
+
+.scroll-up i {
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: #bdc3c7;
+    border: 1px solid #949da4;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.scroll-up i:hover,
+.scroll-up i:active {
+    background-color: #6c777f;
+    border-color: #6c777f;
+}
+
+/*------------------------------------------------------------------------
+:: BUTTONS
+-------------------------------------------------------------------------*/
+
+#get-in-touch-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #c0392b;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    font-weight: 700;
+    outline: none;
+    text-transform: uppercase;
+    line-height: 145%;
+    color: #fff;
+}
+
+#get-in-touch-button i {
+    margin-left: 5px;
+}
+
+#get-in-touch-button:hover { background-color: #d14233; }
+
+#get-in-touch-button:active {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    background-color: #ac3326;
+    color: #f2f2f2;
+}
+
+/*------------------------------------------------------------------------
+:: LINKS
+-------------------------------------------------------------------------*/
+
+.introduction-text a:link,
+.introduction-text a:visited {
+    color: #2bb2c0;
+    font-weight: 700;
+}
+
+.introduction-text a:hover,
+.introduction-text a:active {
+    color: #18656c;
+    border-bottom: 1px solid #18656c;
+}
+
+.email-address a:link,
+.email-address a:visited {
+    color:  #e67e22;
+    padding: 15px;
+}
+
+.email-address a:hover,
+.email-address a:active {
+    color:  #bf6516;
+    border-bottom: 1px solid #bf6516;
+}
+
+.edu-institution a:link,
+.edu-institution a:visited,
+.online-course-provider a:link,
+.online-course-provider a:visited,
+.employment-employer a:link,
+.employment-employer a:visited,
+.projects-link a:link,
+.projects-link a:visited {
+    color: #2bb2c0;
+    margin-right: 10px;
+    padding: 10px 0 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.edu-institution a:hover,
+.edu-institution a:active,
+.online-course-provider a:hover,
+.online-course-provider a:active,
+.employment-employer a:hover,
+.employment-employer a:active,
+.projects-link a:hover,
+.projects-link a:active {
+    color: #18656c;
+    border-bottom: 1px solid #18656c;
+}
+
+.footer-media a:link,
+.footer-media a:visited {
+    color:  #7f8c8d;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+    color: #517fa4;
+}
+
+.fa-github:hover,
+.fa-guthub:active {
+    color: #4183c4;
+}
+
+.fa-twitter:hover,
+.fa-twitter:active {
+    color: #00aced;
+}
+
+.fa-flickr:hover,
+.fa-flickr:active {
+    color: #0063dc;
+}
+
+.footer-media .fa-envelope-o:hover,
+.footer-media .fa-envelope-o:active {
+    color: #c0392b;
+}
+
+/*------------------------------------------------------------------------
+:: HEADER
+-------------------------------------------------------------------------*/
+
+.page-header { margin-bottom: 70px; }
+
+.name,
+.role {
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+.name {
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+.role {
+    font-size: 0.9em;
+    padding-bottom: 40px;
+}
+
+.portrait-image,
+.get-in-touch-button,
+.primary-email-location {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.primary-email-location a {
+    font-size: 0.6em;
+}
+
+.portrait-image img {
+    width: 120px;
+    height: auto;
+    border-radius: 60px;
+}
+
+.introduction-text {
+    margin: 30px 0;
+    line-height: 145%;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.introduction-text p { padding-bottom: 25px; }
+
+.primary-email-location {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.email-introduction,
+.email-address {
+    text-align: center;
+    font-size: 1em;
+}
+
+.email-address {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/*------------------------------------------------------------------------
+:: SECTIONS
+-------------------------------------------------------------------------*/
+
+.education-entry,
+.online-course-entry,
+.employment-entry {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #7f8c8d;
+}
+
+.education-entry:last-child,
+.online-course-entry:last-child,
+.employment-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.edu-degree,
+.employment-position,
+.online-course-name {
+    margin-bottom: 20px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #3e5870;
+}
+
+.edu-institution,
+.edu-time,
+.online-course-provider,
+.online-course-time,
+.employment-employer,
+.employment-time {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.edu-major,
+.employment-description {
+    font-size: 0.9em;
+    line-height: 145%;
+    padding-top: 1%
+}
+
+.edu-time i,
+.online-course-time i,
+.employment-time i {
+    padding: 2px 4px 0 0;
+}
+
+/*------------------------------------------------------------------------
+:: SKILLS
+-------------------------------------------------------------------------*/
+
+.skills-technical,
+.skills-languages,
+.skills-soft {
+    margin-bottom: 30px;
+}
+
+.skills h3 {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #7f8c8d;
+    font-size: 1em;
+    color: #3e5870;
+}
+
+/* ------- TECHNICAL ------- */
+
+.skills-tech { margin: 0 auto; }
+
+.skills-technical { border-collapse: collapse; }
+
+.skills-technical th:not(:first-child) { max-width: 25px; }
+
+.table-header-rotate {
+    height: 140px;
+    white-space: nowrap;
+    font-weight: 400;
+    color: #3e5870;
+}
+
+.table-header-rotate div {
+    -webkit-transform: translate(0px, 50px) rotate(270deg);
+    transform: translate(0px, 50px) rotate(270deg);
+    max-width: 25px;
+}
+
+.skills-technical td:not(:first-child)  {
+    height: 50px;
+    max-width: 25px;
+    vertical-align: middle;
+}
+
+.skills-technical td:first-child {
+    font-size: 0.9em;
+    width: 120px;
+    border: none;
+}
+
+.round {
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+.skill-dot-blue { background-color: #2980b9; }
+
+.skill-dot-green { background-color: #27ae60; }
+
+.skill-dot-orange { background-color: #d35400; }
+
+.skill-dot-wisteria { background-color: #8e44ad; }
+
+.skill-dot-asbestos { background-color: #7f8c8d; }
+
+/* ------- LANGUAGES AND OTHER ------- */
+
+.skills-languages-entry,
+.skills-other-entry {
+    font-size: 1em;
+    padding: 10px 5px;
+}
+
+/* ------- SOFT ------- */
+
+.skills-soft li { padding: 20px 0; }
+
+.skills-soft-red,
+.skills-soft-green,
+.skills-soft-blue {
+    padding: 10px 6px;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.skills-soft-red { background-color: #c0392b; }
+
+.skills-soft-green { background-color: #27ae60; }
+
+.skills-soft-blue { background-color: #2980b9; }
+
+/* ------- OTHER ------- */
+
+.skills-other-entry {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.skills-other-entry i {
+    font-size: 1.5em;
+    padding-right: 20px;
+    color: #8e44ad;
+}
+
+/*------------------------------------------------------------------------
+:: PROJECTS
+-------------------------------------------------------------------------*/
+
+.col-4-card {
+    width: 100%;
+}
+
+.projects-entry {
+    width: 95%;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px dotted #7f8c8d;
+}
+
+.projects-entry img {
+    margin-top: 25px;
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 5px #7f8c8d;
+}
+
+.projects-title {
+    font-size: 1em;
+    color: #3e5870;
+}
+
+.projects-title,
+.projects-link {
+    padding: 10px 5px;
+    font-size: 1em;
+    text-align: left;
+    line-height: 145%;
+}
+
+.projects-type {
+    padding: 10px 5px;
+    text-align: left;
+    font-size: 0.9em;
+    font-style: italic;
+    color:  #597fa1;
+}
+
+.projects-description {
+    padding: 10px 5px;
+    font-size: 0.9em;
+    text-align: left;
+    height: 150px;
+}
+
+.projects-skills-start {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.projects-skills {
+    font-size: 0.9em;
+}
+
+.projects-icon {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #2c3e50;
+}
+
+/*------------------------------------------------------------------------
+:: MAP
+-------------------------------------------------------------------------*/
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+/*------------------------------------------------------------------------
+:: FOOTER
+-------------------------------------------------------------------------*/
+
+.footer-media,
+.footer-text {
+    text-align: center;
+}
+
+.footer-media li {
+    display: inline-block;
+    font-size: 1.6em;
+    padding: 12px;
+}
+
+.footer-text {
+    padding: 10px;
+    font-size: 0.8em;
+    line-height: 145%;
+    color: #7f8c8d;
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 320px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 320px) {
+
+     /* ------- HEADER ------- */
+
+    .introduction-text {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .primary-email-location a {
+        font-size: 0.8em;
+    }
+
+    /* ------- SECTIONS ------- */
+
+    .online-course-provider,
+    .online-course-time {
+        max-width: 50%;
+    }
+
+    .online-course-time { text-align: right; }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .skills-technical th:not(:first-child) { max-width: 40px; }
+
+    .table-header-rotate div { max-width: 40px; }
+
+    .skills-technical td:not(:first-child) { max-width: 40px; }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        padding: 10px;
+        font-size: 0.8em;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-description,
+    .projects-skills-start {
+        height: 110px;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 421px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 421px) {
+
+    /* ------- COMMON SETUP ------- */
+
+    h2 { font-size: 1.4em; }
+
+    /* ------- BUTTONS ------- */
+
+    #get-in-touch-button {        
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+
+    /* ------- NAVIGATION ------- */
+
+    .scroll-up i { padding: 15px; }
+
+    /* ------- HEADER ------- */
+
+    .name { font-size: 1.8em; }
+
+    .portrait-image img {
+        width: 150px;
+        border-radius: 75px;
+    }
+
+    .primary-email-location a {
+        font-size: 1.1em;
+    }
+
+    /* ------- SECTIONS ------- */
+
+    .edu-degree,
+    .employment-position,
+    .online-course-name {
+        font-size: 1.2em;
+    }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .table-header-rotate div {
+        -webkit-transform: translate(15px, 50px) rotate(315deg);
+        transform: translate(15px, 50px) rotate(315deg);
+    }
+
+    .skills-technical td:first-child { font-size: 1em; }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-title { font-size: 1.1em; }
+
+    .projects-title,
+    .projects-link,
+    .projects-type,
+    .projects-description {
+        padding: 10px;
+    }
+
+    .projects-title { max-width: 70%; }
+
+    .projects-link {
+        max-width: 30%;
+        text-align: right;
+    }
+
+    .projects-description,
+    .projects-skills-start {
+        height: 90px;
+    }
+
+    .projects-skills-start { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+
+    .projects-skills,
+    .projects-icon {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-height: 80px;
+    }
+
+    .projects-skills { border-left: 1px dotted #7f8c8d; }
+
+    .projects-icon { margin-bottom: 0; }
+
+    /* ------- FOOTER ------- */
+
+    .footer-media li {
+        font-size: 1.8em;
+        padding: 15px;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 521px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 521px) {
+
+    /* ------- PROJECTS ------- */
+
+    .col-4-card {
+        width: 45%;
+    }
+
+    .projects-title,
+    .projects-link {
+        min-width: 100%;
+        text-align: left;
+    }
+
+    .projects-title {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 90px;
+    }
+
+    .projects-skills-start { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+    .projects-skills { border-left: none; }
+
+    .projects-description,
+    .projects-skills-start {
+        height: 150px;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 621px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 621px) {
+
+    /* -------  COMMON SETUP ------- */
+
+    .education,
+    .courses-online,
+    .employment,
+    .skills,
+    .projects,
+    .map {
+        margin: 40px 0;
+    }
+
+    .footer { margin: 10px 0 50px 0; }
+
+    .courses-online-header {
+        margin-left: 20px;
+        max-width: 250px;
+    }
+
+    .skills-header {
+        max-width: 120px;
+        margin-left: 20px;
+    }
+
+    /* -------  HEADER ------- */
+
+    .page-header {
+        height: 100vh;
+        margin-bottom: 0;
+    }
+
+    .introduction-text { font-size: 1.1em; }
+
+    .email-introduction { font-size: 1.2em; }
+
+    /* ------- SECTIONS ------- */
+
+    .courses-online {
+        -webkit-flex-basis: 41.66%;
+        -ms-flex-preferred-size: 41.66%;
+        flex-basis: 41.66%;
+        max-width: 41.66%;
+    }
+
+    .skills {
+        -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .courses-online { margin: 0; }
+
+    .skills {
+          border-left: 1px dotted #7f8c8d;
+          margin: 0 auto;
+    }
+
+    .online-course-name { font-size: 1em;}
+
+    .online-course-provider,
+    .online-course-time {
+        min-width: 100%;
+        text-align: left;
+    }
+
+    .employment-employer,
+    .employment-time {
+        max-width: 50%;
+    }
+
+    .employment-time { text-align: right; }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .table-header-rotate div { -webkit-transform: translate(0, 50px) rotate(270deg); transform: translate(0, 50px) rotate(270deg); }
+
+    .skills-technical td:first-child { font-size: 0.9em; }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        font-size: 0.8em;
+        padding: 10px 6px;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-title { min-height: auto; }
+
+    .projects-skills-start { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+
+    .projects-skills { border-left: 1px dotted #7f8c8d; }
+
+    .projects-description,
+    .projects-skills-start {
+        height: 130px;
+    }
+
+    /* ------- MAP ------- */
+
+    #map { height: 400px; }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 721px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 721px) {
+
+    /* -------  HEADER ------- */
+
+    .portrait-image { margin: 35px 0; }
+
+    .introduction-text p { padding-bottom: 15px; }
+
+    /* -------  SECTIONS ------- */
+
+    .edu-institution,
+    .edu-time {
+        max-width: 50%;
+    }
+
+    .online-course-provider,
+    .online-course-time {
+        min-width: 50%;
+    }
+
+    .online-course-time { text-align: right; }
+
+    .edu-time {text-align: right; }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .table-header-rotate div { -webkit-transform: translate(15px, 50px) rotate(315deg); transform: translate(15px, 50px) rotate(315deg); }
+
+    .skills-technical td:first-child { font-size: 1em; }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 821px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 821px) {
+
+    /* ------- PROJECTS ------- */
+
+    .projects-title { min-width: 70%; }
+
+    .projects-link {
+        min-width: 30%;
+        text-align: right;
+    }
+
+    /* ------- MAP ------- */
+
+    #map { height: 500px; }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 960px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 960px) {
+
+    /* ------- GRID ------- */
+
+    .col-1 {
+        -webkit-flex-basis: 8.33%;
+        -ms-flex-preferred-size: 8.33%;
+        flex-basis: 8.33%;
+        max-width: 8.33%;
+    }
+
+    .col-2 {
+        -webkit-flex-basis: 16.66%;
+        -ms-flex-preferred-size: 16.66%;
+        flex-basis: 16.66%;
+        max-width: 16.66%;
+    }
+
+    .col-3 {
+        -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .col-4 {
+        -webkit-flex-basis: 33.33%;
+        -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .col-5 {
+        -webkit-flex-basis: 41.66%;
+        -ms-flex-preferred-size: 41.66%;
+        flex-basis: 41.66%;
+        max-width: 41.66%;
+    }
+
+    .col-6 {
+        -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col-7 {
+        -webkit-flex-basis: 58.33%;
+        -ms-flex-preferred-size: 58.33%;
+        flex-basis: 58.33%;
+        max-width: 58.33%;
+    }
+
+    .col-8 {
+        -webkit-flex-basis: 66.66%;
+        -ms-flex-preferred-size: 66.66%;
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+
+    .col-9 {
+        -webkit-flex-basis: 75%;
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+        max-width: 75%;
+    }
+
+    .col-10 {
+        -webkit-flex-basis: 83.33%;
+        -ms-flex-preferred-size: 83.33%;
+        flex-basis: 83.33%;
+        max-width: 83.33%;
+    }
+
+    .col-11 {
+        -webkit-flex-basis: 91.66%;
+        -ms-flex-preferred-size: 91.66%;
+        flex-basis: 91.66%;
+        max-width: 91.66%;
+    }
+
+    .col-12 {
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* -------  COMMON SETUP ------- */
+
+    .divider {
+        display: block;
+        border-bottom: 1px dotted #7f8c8d;
+        margin: 80px 0;
+    }
+
+    /* -------  HEADER ------- */
+
+    .name {
+        margin-top: 50px;
+        font-size: 2em;
+    }
+
+    /* -------  SECTIONS ------- */
+
+    .education,
+    .courses-online,
+    .employment,
+    .skills,
+    .projects,
+    .map {
+        margin: 20px 0;
+    }
+
+    .edu-institution,
+    .edu-time {
+        min-width: 100%;
+        text-align: left;
+    }
+
+    .employment-header { min-width: 300px; }
+
+    .edu-header,
+    .courses-online-header,
+    .employment-header,
+    .skills-header,
+    .projects-header,
+    .maps-header {
+        margin: 0 0 30px 20px;
+    }
+
+    .skills { border-left: none; }
+
+    .courses-online,
+    .employment {
+        border-left: 1px dotted #7f8c8d;
+    }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .table-header-rotate div { -webkit-transform: translate(0, 50px) rotate(270deg); transform: translate(0, 50px) rotate(270deg); }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        padding: 10px 10px;
+        letter-spacing: 0px;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-list { margin: 0 -10px; }
+
+    .col-4-card { width: 31.3%; }
+
+    .projects-title,
+    .projects-link {
+        min-width: 100%;
+        text-align: left;
+    }
+
+    /* ------- MAP ------- */
+
+    .map .row { margin: 0; }
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (MIN-WIDTH: 1140px)
+-------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1140px) {
+
+    /* ------- GRID ------- */
+
+    .container { width: 1140px; }
+
+    /* ------- SECTIONS ------- */
+
+    .edu-institution,
+    .edu-time {
+        min-width: auto;
+    }
+
+    .edu-time { text-align: right; }
+
+    /* ------- TECHNICAL SKILLS ------- */
+
+    .table-header-rotate div { -webkit-transform: translate(15px, 50px) rotate(315deg); transform: translate(15px, 50px) rotate(315deg); }
+
+    .skills-technical td:first-child { font-size: 1em; }
+
+    /* ------- SOFT SKILLS ------- */
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        padding: 10px 15px;
+        letter-spacing: 1px;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-title,
+    .projects-link {
+        min-width: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 90px;
+    }
+
+    .projects-link { -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end;}
+
+}
+
+/*------------------------------------------------------------------------
+:: RESPONSIVE (LANDSCAPE ORIENTATION ON SMALL DEVICE)
+-------------------------------------------------------------------------*/
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    /* ------- HEADER ------- */
+
+    .page-header { height: 130vw; }
+
+}
+
+@media screen and (min-height: 501px) and (max-height: 800px) and (orientation: landscape) {
+
+    /* ------- HEADER ------- */
+
+    .page-header { height: 100vw; }
+
+}
+
+/*------------------------------------------------------------------------
+:: PRINT
+-------------------------------------------------------------------------*/
+
+@media print  {
+
+    /* ------- COMMON SETUP ------- */
+
+    body { font-size: 16px; }
+
+    .footer { display: none; }
+
+    .edu-header,
+    .courses-online-header,
+    .employment-header,
+    .skills-header,
+    .projects-header {
+        margin: 20px 0;
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* ------- NAVIGATION ------- */
+
+    .scroll-up-hidden,
+    .scroll-up {
+        display: none!important;
+    }
+
+    /* ------- BUTTONS ------- */
+
+    #get-in-touch-button { display: none; }
+
+    /* ------- LINKS ------- */
+
+    .introduction-text a:link,
+    .introduction-text a:visited {
+        color: #2c3e50;
+        font-weight: 300;
+    }
+
+    .email-address a:link,
+    .email-address a:visited {
+        padding: 0;
+    }
+
+    /* ------- HEADER ------- */
+
+    .page-header { margin-bottom: 0; }
+
+    .name,
+    .role {
+        padding: 5px 0;
+    }
+
+    .name { margin-top: 10px; }
+
+    .role { padding-bottom: 10px; }
+
+    .portrait-image { display: none; }
+
+    .primary-email-location a { font-size: 1em; }
+
+    .introduction-text {
+        margin: 15px 0;
+        line-height: 125%;
+        text-align: left;
+    }
+
+    .introduction-text p { padding-bottom: 10px; }
+
+    .primary-email-location {
+        display: block!important;
+        margin-top: 0;
+    }
+
+    .email-introduction,
+    .email-address {
+        float: left;
+        text-align: left;
+        clear: both;
+    }
+
+    .email-introduction { padding: 0; }
+
+    .email-address {
+        margin-top: 0px;
+        padding: 0;
+        font-size: 1em;
+    }
+
+    /* ------- SECTIONS ------- */
+
+    .edu-institution,
+    .edu-time,
+    .online-course-provider,
+    .online-course-time,
+    .employment-employer,
+    .employment-time {
+        width: 50%;
+    }
+
+    .edu-major,
+    .employment-description {
+        padding-top: 0;
+    }
+
+    .employment-entry {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* ------- SKILLS ------- */
+
+    .skills h3 {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    .skills-technical td:not(:first-child)  { height: 40px; }
+
+    .skill-dot-blue:after { content: "X"; }
+
+    .skill-dot-green:after { content: "X"; }
+
+    .skill-dot-orange:after { content: "X"; }
+
+    .skill-dot-wisteria:after { content: "X"; }
+
+    .skill-dot-asbestos:after { content: "X"; }
+
+    /* ------- SOFT ------- */
+
+    .skills-soft li { padding: 3px 0; }
+
+    .skills-soft-red,
+    .skills-soft-green,
+    .skills-soft-blue {
+        font-size: 0.85em;
+        color: #2c3e50;
+    }
+
+    /* ------- PROJECTS ------- */
+
+    .projects-entry img { box-shadow: none; }
+
+    .projects-link { display: none }
+
+    .projects-description {
+        height: 100px;
+        font-size: 0.8em;
+    }
+
+    .projects-icon {
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    .projects-skills { font-size: 0.8em; }
+
+    /* ------- MAP ------- */
+
+    .map { display: none; }
+
+    /* ------- FLEXBOX FIX AS IT DOESN'T WORK WHEN PRINTING IN FF AND IE ------- */
+
+    .row {
+        display: block;
+        width: 100%;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .edu-header,
+    .courses-online-header,
+    .employment-header,
+    .skills-header,
+    .projects-header {
+        display: block;
+        text-align: left;
+        float: left;
+    }
+
+    .edu-institution,
+    .edu-time,
+    .online-course-provider,
+    .online-course-time,
+    .employment-employer,
+    .employment-time {
+        width: 50%;
+        float: left;
+    }
+
+    .skills-set { width: 100%; }
+
+    .skills-technical,
+    .skills-languages,
+    .skills-soft,
+    .skills-other {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        clear: none;
+    }
+
+    .skills-technical,
+    .skills-soft {
+        width: 60%;
+    }
+
+    .skills-languages,
+    .skills-other {
+        width: 40%;
+    }
+
+    .projects { width: 100%; }
+
+    .col-4-card {
+        width: 30%;
+        margin-right: 20px;
+        float: left;
+        clear: none;
+    }
+
+    .employment-description {
+        text-align: left;
+    }
+
+    .employment-employer,
+    .employment-time {
+        clear: both;
+    }
+
+}
