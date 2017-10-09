@@ -517,12 +517,12 @@ button::-moz-focus-inner { border: 0; }
 .projects-entry {
     width: 95%;
     margin: 10px auto;
+    padding: 30px 20px;
     text-align: center;
     border: 1px dotted #7f8c8d;
 }
 
-.projects-entry img {
-    margin-top: 25px;
+.projects-entry img {    
     width: 100%;
     height: auto;
     box-shadow: 1px 1px 5px #7f8c8d;
@@ -567,8 +567,7 @@ button::-moz-focus-inner { border: 0; }
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: center;    
     height: 150px;
 }
 
@@ -660,7 +659,6 @@ button::-moz-focus-inner { border: 0; }
 
     /* ------- PROJECTS ------- */
 
-    .projects-description,
     .projects-skills-start {
         height: 110px;
     }
@@ -745,7 +743,10 @@ button::-moz-focus-inner { border: 0; }
         text-align: right;
     }
 
-    .projects-description,
+    .projects-description {
+        height: 110px;
+    }
+    
     .projects-skills-start {
         height: 90px;
     }
@@ -816,7 +817,10 @@ button::-moz-focus-inner { border: 0; }
 
     .projects-skills { border-left: none; }
 
-    .projects-description,
+    .projects-description {
+        height: 180px;
+    }
+
     .projects-skills-start {
         height: 150px;
     }
@@ -924,7 +928,10 @@ button::-moz-focus-inner { border: 0; }
 
     .projects-skills { border-left: 1px dotted #7f8c8d; }
 
-    .projects-description,
+    .projects-description {
+        height: 150px;
+    }
+    
     .projects-skills-start {
         height: 130px;
     }

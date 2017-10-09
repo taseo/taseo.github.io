@@ -41,13 +41,13 @@ var HTMLHeaderName = '<h1 class="name">%data%</h1>',
 
     HTMLProjectsStart = '<div class="projects-list row">',
     HTMLProjectsEntry = '<div class="projects-entry col-4-card row">',
-    HTMLProjectsImage = '<div class="col-12"><img src="%src%" alt="%data%"></div>',
+    HTMLProjectsImage = '<div><img src="%src%" alt="%data%"></div>',
     HTMLProjectsTitle = '<div class="col-8 projects-title"><h3>%data%</h3></div>',
     HTMLProjectsLink = '<div class="col-4 projects-link"><a href="%data%" target="_blank">source</a></div>',
     HTMLProjectsType = '<div class="col-12 projects-type">%data%</div>',
     HTMLProjectsDescription = '<div class="col-12 projects-description"><p>%data%</p></div>',
-    HTMLProjectsSlillsStart = '<div class="col-12 projects-skills-start">',
-    HTMLProjectsSlillsIcon = '<div class="col-3 projects-icon"><i class="fa fa-wrench" aria-hidden="true"></i></div>',
+    HTMLProjectsSkillsStart = '<div class="col-12 projects-skills-start">',
+    HTMLProjectsSkillsIcon = '<div class="col-3 projects-icon"><i class="fa fa-wrench" aria-hidden="true"></i></div>',
     HTMLProjectsSkills = '<div class="col-9 projects-skills"></p>%data%</p></div>',
 
     HTMLFooterSocialMediaStart = '<ul class="footer-social-media-list"></ul>',
@@ -680,7 +680,6 @@ function displayProjects(projects) {
         .append(HTMLProjectsEntry);
 
       var $lastProject = $projects.find('.projects-entry:last'),
-          $lastProjectStart = $lastProject.find('.projects-skills-start:last'),
           numberOfSkills = projects[project].skills.length,
           skillsUsed = '';
       
@@ -689,10 +688,7 @@ function displayProjects(projects) {
       $lastProject.append(HTMLProjectsLink.replace('%data%', projects[project].url));
       $lastProject.append(HTMLProjectsType.replace('%data%', projects[project].type));
       $lastProject.append(HTMLProjectsDescription.replace('%data%', projects[project].description));
-      $lastProject.append(HTMLProjectsSlillsStart);
-
-
-      $lastProjectStart.append(HTMLProjectsSlillsIcon);
+      $lastProject.append(HTMLProjectsSkillsStart);
 
       for (i = 0; i < numberOfSkills; i++) {
 
@@ -705,7 +701,10 @@ function displayProjects(projects) {
         }
       }
 
-      $lastProjectStart.append(HTMLProjectsSkills.replace('%data%', skillsUsed));
+      $lastProject
+        .find('.projects-skills-start:last')
+        .append(HTMLProjectsSkillsIcon)
+        .append(HTMLProjectsSkills.replace('%data%', skillsUsed));
     }
   }
 };
