@@ -460,7 +460,7 @@ var about = {
     textFooter: [
       {
         text: 'Made with love in Riga',
-        lastUpdate: 'October 08, 2017'
+        lastUpdate: 'October 17, 2017'
       }
     ]
   }
