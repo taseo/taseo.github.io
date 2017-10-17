@@ -106,10 +106,16 @@ var about = {
     
     onlineCourses: [
       {
+        provider: 'Udacity',
+        course: 'Website Performance Optimization',
+        timeFrame: 'In progress',
+        url: 'https://www.udacity.com/course/website-performance-optimization--ud884'
+      },
+      {
         provider: 'Udemy',
         course: 'Vue JS 2 - The Complete Guide',
         timeFrame: 'August 2017',
-        url: 'https://www.udemy.com/vuejs-2-the-complete-guide/'
+        url: 'https://www.udemy.com/vuejs-2-the-complete-guide'
       }, 
       {
         provider: 'Udacity',
