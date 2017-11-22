@@ -107,6 +107,12 @@ var about = {
     onlineCourses: [
       {
         provider: 'Udacity',
+        course: 'Google Developer Challenge Scholarship: Mobile Web',
+        timeFrame: 'In progress',
+        url: 'https://www.udacity.com'
+      },
+      {
+        provider: 'Udacity',
         course: 'Website Performance Optimization',
         timeFrame: 'In progress',
         url: 'https://www.udacity.com/course/website-performance-optimization--ud884'
@@ -460,7 +466,7 @@ var about = {
     textFooter: [
       {
         text: 'Made with love in Riga',
-        lastUpdate: 'October 17, 2017'
+        lastUpdate: 'November 22, 2017'
       }
     ]
   }
