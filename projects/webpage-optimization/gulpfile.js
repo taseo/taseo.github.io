@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const purify = require('gulp-purifycss');
-const inlineCss = require('gulp-inline-css');
 const minifyInline = require('gulp-minify-inline');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
@@ -24,7 +23,6 @@ gulp.task('purify-css', function() {
 gulp.task('minify-html', () => {
   return gulp
     .src('./src/**/*.html')
-    .pipe(inlineCss())
     .pipe(minifyInline())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./'));
