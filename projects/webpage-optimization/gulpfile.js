@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const purify = require('gulp-purifycss');
 const minifyInline = require('gulp-minify-inline');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
@@ -7,15 +6,6 @@ const cleanCSS = require('gulp-clean-css');
 
 gulp.task('watch', () => {
   gulp.watch(['src/*html'], ['minify']);
-});
-
-// removes unnecesary CSS from included bootstrap frame-work
-
-gulp.task('purify-css', function() {
-  return gulp
-    .src('./src/views/css/*.css')
-    .pipe(purify(['./src/views/**/*.html', './src/views/**/*.js']))
-    .pipe(gulp.dest('./views/css'));
 });
 
 // minifies html
@@ -33,7 +23,9 @@ gulp.task('minify-html', () => {
 gulp.task('minify-js', () => {
   return gulp
     .src('./src/**/*.js')
-    .pipe(uglify())
+    .pipe(uglify().on('error', function(e) {
+      console.log(e);
+    }))
     .pipe(gulp.dest('./'));
 });
 
@@ -46,4 +38,4 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['purify-css', 'minify-html', 'minify-js', 'minify-css', 'watch']);
+gulp.task('default', ['minify-html', 'minify-js', 'minify-css', 'watch']);

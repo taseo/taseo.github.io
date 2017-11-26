@@ -14,7 +14,6 @@
         "gulp-clean-css": "^3.9.0",
         "gulp-htmlmin": "^3.0.0",
         "gulp-minify-inline": "^1.0.0",
-        "gulp-purifycss": "^0.2.0",
         "gulp-uglify": "^3.0.0"
     }
 }
