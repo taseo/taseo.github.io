@@ -114,7 +114,7 @@ var about = {
       {
         provider: 'Udacity',
         course: 'Website Performance Optimization',
-        timeFrame: 'In progress',
+        timeFrame: 'November 2017',
         url: 'https://www.udacity.com/course/website-performance-optimization--ud884'
       },
       {
@@ -466,7 +466,7 @@ var about = {
     textFooter: [
       {
         text: 'Made with love in Riga',
-        lastUpdate: 'November 22, 2017'
+        lastUpdate: 'November 26, 2017'
       }
     ]
   }
