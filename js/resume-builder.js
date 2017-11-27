@@ -203,6 +203,11 @@ var about = {
         color: 'skill-dot-green'
       },
       {
+        tech: 'Gulp',
+        skillLevel: 1,
+        color: 'skill-dot-green'
+      },
+      {
         tech: 'Vuejs',
         skillLevel: 1,
         color: 'skill-dot-green',
@@ -298,21 +303,21 @@ var about = {
       employer: 'Dyninno',
       url: 'http://dyninno.com/',
       timeFrame: 'August 2016 &ndash; Currently',
-      desciption: 'I build responsive web applications according to design specifications, maintain and re-factor legacy code accross several projects'
+      desciption: 'I build responsive web applications, develop internal JavaScript libraries, maintain and re-factor legacy code'
     },
     {
       position: 'Client Service Executive',
       employer: 'The Nielsen Company',
       url: 'http://www.nielsen.com',
       timeFrame: 'July 2015 &ndash; June 2016',
-      desciption: 'Built relations with existing clients, grow new sales through upselling and analyzed retail sales data to look for new opportunities and support customers&apos; business'
+      desciption: 'Built relations with existing clients, grew new sales through upselling and analysed retail sales data to look for new opportunities and support business needs'
     },
     {
       position: 'Report Centre Liaison',
       employer: 'The Nielsen Company',
       url: 'http://www.nielsen.com',
       timeFrame: 'June 2014 &ndash; June 2015',
-      desciption: 'Handled report preparation for clients across Baltic countries, provided software trainings, solved technical issues and supported local client service team'
+      desciption: 'Handled report preparation for clients across Baltic countries, provided software training, solved technical issues and supported local client service team'
     },
     {
       position: 'Junior Retail Service Executive (temporary position)',
@@ -466,7 +471,7 @@ var about = {
     textFooter: [
       {
         text: 'Made with love in Riga',
-        lastUpdate: 'November 26, 2017'
+        lastUpdate: 'November 27, 2017'
       }
     ]
   }
