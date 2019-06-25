@@ -3,4 +3,4 @@ Arcade game project based on Udacity's Javascript [course](https://www.udacity.c
 
 Game's engine and art assets were provided by the course. Original source code can be found [here](https://github.com/udacity/frontend-nanodegree-arcade-game)
 
-Project is hosted [here](http://artursipatenko.com/projects/frogger-clone/frogger-clone.html) or you can download it from GitHub and run frogger-clone.html on your local machine
+Project is hosted [here](https://artursipatenko.com/projects/frogger-clone/frogger-clone.html) or you can download it from GitHub and run frogger-clone.html on your local machine

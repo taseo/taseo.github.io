@@ -96,7 +96,7 @@ function initMap() {
         map: map,
         position: { lat: 38.7222524, lng: -9.1393366 },
         title: "Omnifood Lisbon HQ",
-        icon: "http://maps.google.com/mapfiles/ms/icons/purple.png"
+        icon: "https://maps.google.com/mapfiles/ms/icons/purple.png"
     });
 }
 

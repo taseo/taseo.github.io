@@ -92,7 +92,7 @@ var about = {
         degree: 'Professional Bachelor Degree in Business Administration',
         timeFrame: 'Dropped (completed 75%)',
         major: ['Management', 'Finance'],
-        url: 'http://www.turiba.lv/en/'
+        url: 'https://www.turiba.lv/en/'
       },
       {
         name: 'Haaga-Helia UAS',
@@ -100,7 +100,7 @@ var about = {
         degree: 'Erasmus Exchange',
         timeFrame: 'August 2009 - May 2010',
         major: ['Project management', 'Marketing research', 'Cost accounting'],
-        url: 'http://www.haaga-helia.fi/en'
+        url: 'https://www.haaga-helia.fi/en'
       }
     ],
     
@@ -301,35 +301,35 @@ var about = {
     {
       position: 'Front-End Developer',
       employer: 'Dyninno',
-      url: 'http://dyninno.com/',
+      url: 'https://dyninno.com/',
       timeFrame: 'August 2016 &ndash; Currently',
       desciption: 'I build responsive web applications, develop internal JavaScript libraries, maintain and re-factor legacy code'
     },
     {
       position: 'Client Service Executive',
       employer: 'The Nielsen Company',
-      url: 'http://www.nielsen.com',
+      url: 'https://www.nielsen.com',
       timeFrame: 'July 2015 &ndash; June 2016',
       desciption: 'Built relations with existing clients, grew new sales through upselling and analysed retail sales data to look for new opportunities and support business needs'
     },
     {
       position: 'Report Centre Liaison',
       employer: 'The Nielsen Company',
-      url: 'http://www.nielsen.com',
+      url: 'https://www.nielsen.com',
       timeFrame: 'June 2014 &ndash; June 2015',
       desciption: 'Handled report preparation for clients across Baltic countries, provided software training, solved technical issues and supported local client service team'
     },
     {
       position: 'Junior Retail Service Executive (temporary position)',
       employer: 'The Nielsen Company',
-      url: 'http://www.nielsen.com',
+      url: 'https://www.nielsen.com',
       timeFrame: 'January 2014 &ndash; May 2014',
       desciption: 'Implemented standardized data reporting solution for several retail clients in Latvia'
     },
     {
       position: 'Non&ndash;Food Category Manager\'s Assistant',
       employer: 'Maxima',
-      url: 'http://www.maxima.lv',
+      url: 'https://www.maxima.lv',
       timeFrame: 'April 2013 &ndash; August 2013',
       desciption: 'Worked with suppliers, implemented sales promotions, prepared documentation and planograms'
     },
@@ -386,55 +386,55 @@ var about = {
       title: 'Riga',
       latitute: 56.9715833,
       longtitute: 23.9890818,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/purple.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/purple.png'
     },
     {
       title: 'Helsinki',
       latitute: 60.1641013,
       longtitute: 24.900187,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Porvoo',
       latitute: 60.2997635,
       longtitute: 25.4585948,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Tallinn',
       latitute: 59.4250275,
       longtitute: 24.6682023,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Vilnius',
       latitute: 54.7002886,
       longtitute: 25.112851,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Stockholm',
       latitute: 59.326242,
       longtitute: 17.8474649,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Saint Petersburg',
       latitute: 59.9174925,
       longtitute: 30.0448876,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Prague',
       latitute: 50.0598058,
       longtitute: 14.3255422,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     },
     {
       title: 'Milano',
       latitute: 45.4628328,
       longtitute: 9.1076928,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/red.png'
+      icon: 'https://maps.google.com/mapfiles/ms/icons/red.png'
     }
   ],
 
