@@ -77,7 +77,7 @@ var about = {
     },
     introduction: [
       '<p>I&apos;m web developer, introvert (INTJ), runner and minimalist.</p>',
-      '<p>I&apos;m fasccinated with <a href="https://www.flickr.com/photos/artturi" target="_blank">photography</a>, self-improvement, entrepreneurship, relativism and DIY electronics.</p>',
+      '<p>I&apos;m fasccinated with <a href="https://www.flickr.com/photos/artturi" target="_blank">photography</a>, self-improvement and DIY electronics.</p>',
       '<p>I speak three languages; English, Russian and Latvian.</p>',
       '<p>My favorite novel is <a lang="ja" href="https://en.wikipedia.org/wiki/Norwegian_Wood_%28novel%29" target="_blank">ノルウェイの森.</a></p>'
     ]
@@ -866,7 +866,7 @@ function assemleEmail() {
 
 $(document).on('scroll', function() {
   
-  if ($(document).scrollTop() >= 150) {
+  if ($(document).scrollTop() >= screen.height) {
     $arrowUp.fadeIn('slow', function() {
       
       $arrowUp.removeClass('scroll-up-hidden');

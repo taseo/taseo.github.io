@@ -408,8 +408,6 @@ button::-moz-focus-inner { border: 0; }
 
 /* ------- TECHNICAL ------- */
 
-.skills-tech { margin: 0 auto; }
-
 .skills-technical { border-collapse: collapse; }
 
 .skills-technical th:not(:first-child) { max-width: 25px; }
