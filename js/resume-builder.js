@@ -76,10 +76,10 @@ var about = {
       domain: '.com'
     },
     introduction: [
-      '<p>I&apos;m web developer, introvert (INTJ), runner and minimalist.</p>',
-      '<p>I&apos;m fasccinated with <a href="https://www.flickr.com/photos/artturi" target="_blank">photography</a>, self-improvement and DIY electronics.</p>',
-      '<p>I speak three languages; English, Russian and Latvian.</p>',
-      '<p>My favorite novel is <a lang="ja" href="https://en.wikipedia.org/wiki/Norwegian_Wood_%28novel%29" target="_blank">ノルウェイの森.</a></p>'
+      '<p>I&apos;m web developer, introvert (INTJ), runner and minimalist</p>',
+      '<p>I&apos;m fascinated with <a href="https://www.flickr.com/photos/artturi" target="_blank">photography</a>, self-improvement and electronics</p>',
+      '<p>I speak three languages; English, Russian and Latvian</p>',
+      '<p>My favorite novel is <a lang="ja" href="https://en.wikipedia.org/wiki/Norwegian_Wood_%28novel%29" target="_blank">ノルウェイの森</a></p>'
     ]
   },
   
@@ -87,11 +87,27 @@ var about = {
     
     eduInstitutions: [
       {
+        name: 'Riga Tehnical University',
+        location: 'Riga, Latvia',
+        degree: 'Bachelor Degree in electronics and communications',
+        timeFrame: 'September 2019 - Present',
+        major: [''],
+        url: 'https://www.rtu.lv/en'
+      },
+      {
+        name: 'Udacity',
+        location: 'Online',
+        degree: 'Mobile Web Specialist',
+        timeFrame: 'February 2018 - August 2018',
+        major: ['Web performance', 'accessibility', 'progressive web apps'],
+        url: 'https://graduation.udacity.com/confirm/NJ9MHJVT'
+      },
+      {
         name: 'Turiba University',
         location: 'Riga, Latvia',
         degree: 'Professional Bachelor Degree in Business Administration',
         timeFrame: 'Dropped (completed 75%)',
-        major: ['Management', 'Finance'],
+        major: ['Management', 'finance'],
         url: 'https://www.turiba.lv/en/'
       },
       {
@@ -99,7 +115,7 @@ var about = {
         location: 'Porvoo, Finland',
         degree: 'Erasmus Exchange',
         timeFrame: 'August 2009 - May 2010',
-        major: ['Project management', 'Marketing research', 'Cost accounting'],
+        major: ['Project management', 'marketing research', 'cost accounting'],
         url: 'https://www.haaga-helia.fi/en'
       }
     ],
@@ -108,7 +124,7 @@ var about = {
       {
         provider: 'Udacity',
         course: 'Google Developer Challenge Scholarship: Mobile Web',
-        timeFrame: 'In progress',
+        timeFrame: 'January 2018',
         url: 'https://www.udacity.com'
       },
       {
@@ -178,6 +194,31 @@ var about = {
 
     technical: [
       {
+        tech: 'Javascript',
+        skillLevel: 3,
+        color: 'skill-dot-green'
+      },
+      {
+        tech: 'Typescript',
+        skillLevel: 3,
+        color: 'skill-dot-green'
+      },
+      {
+        tech: 'Python',
+        skillLevel: 2,
+        color: 'skill-dot-green'
+      },
+      {
+        tech: 'C',
+        skillLevel: 1,
+        color: 'skill-dot-green'
+      },
+      {
+        tech: 'Bash',
+        skillLevel: 1,
+        color: 'skill-dot-green'
+      },
+      {
         tech: 'HTML',
         skillLevel: 3,
         color: 'skill-dot-orange'
@@ -185,57 +226,37 @@ var about = {
       {
         tech: 'CSS',
         skillLevel: 3,
-        color: 'skill-dot-orange'
+        color: 'skill-dot-orange',
       },
       {
-        tech: 'SCSS',
+        tech: 'SCSS / LESS',
         skillLevel: 3,
-        color: 'skill-dot-orange'
+        color: 'skill-dot-orange',
       },
       {
-        tech: 'Javascript',
+        tech: 'Angular',
         skillLevel: 3,
-        color: 'skill-dot-green'
+        color: 'skill-dot-asbestos'
       },
       {
-        tech: 'jQuery',
-        skillLevel: 3,
-        color: 'skill-dot-green'
+        tech: 'Webpack',
+        skillLevel: 2,
+        color: 'skill-dot-asbestos'
       },
       {
-        tech: 'Gulp',
-        skillLevel: 1,
-        color: 'skill-dot-green'
-      },
-      {
-        tech: 'Vuejs',
-        skillLevel: 1,
-        color: 'skill-dot-green',
-      },
-      {
-        tech: 'Golang',
-        skillLevel: 1,
-        color: 'skill-dot-green',
-      },
-      {
-        tech: 'Command Line',
+        tech: 'Karma / Jasmine',
         skillLevel: 2,
         color: 'skill-dot-asbestos'
       },
       {
         tech: 'GIT',
         skillLevel: 2,
-        color: 'skill-dot-asbestos'
-      },
-      {
-        tech: 'Excel',
-        skillLevel: 4,
         color: 'skill-dot-blue'
       },
       {
-        tech: 'Arduino',
+        tech: 'Linux',
         skillLevel: 2,
-        color: 'skill-dot-wisteria'
+        color: 'skill-dot-blue'
       }
     ],
 
@@ -300,45 +321,24 @@ var about = {
   employmentHistory: [
     {
       position: 'Front-End Developer',
-      employer: 'Dyninno',
-      url: 'https://dyninno.com/',
-      timeFrame: 'August 2016 &ndash; Currently',
-      desciption: 'I build responsive web applications, develop internal JavaScript libraries, maintain and re-factor legacy code'
+      employer: 'Visma',
+      url: 'https://www.visma.com',
+      timeFrame: 'February 2018 &ndash; Present',
+      desciption: 'Senior developer, building responsive and accessible web applications'
     },
     {
-      position: 'Client Service Executive',
-      employer: 'The Nielsen Company',
+      position: 'Front-End Developer',
+      employer: 'Dynatech',
+      url: 'https://dynatech.lv',
+      timeFrame: 'August 2016 &ndash; January 2018',
+      desciption: 'Maintained several projects for on-line travel agency, assisted team lead with managing team’s workload'
+    },
+    {
+      position: 'Client Service / Report Center Executive',
+      employer: 'Nielsen Latvia',
       url: 'https://www.nielsen.com',
-      timeFrame: 'July 2015 &ndash; June 2016',
-      desciption: 'Built relations with existing clients, grew new sales through upselling and analysed retail sales data to look for new opportunities and support business needs'
-    },
-    {
-      position: 'Report Centre Liaison',
-      employer: 'The Nielsen Company',
-      url: 'https://www.nielsen.com',
-      timeFrame: 'June 2014 &ndash; June 2015',
-      desciption: 'Handled report preparation for clients across Baltic countries, provided software training, solved technical issues and supported local client service team'
-    },
-    {
-      position: 'Junior Retail Service Executive (temporary position)',
-      employer: 'The Nielsen Company',
-      url: 'https://www.nielsen.com',
-      timeFrame: 'January 2014 &ndash; May 2014',
-      desciption: 'Implemented standardized data reporting solution for several retail clients in Latvia'
-    },
-    {
-      position: 'Non&ndash;Food Category Manager\'s Assistant',
-      employer: 'Maxima',
-      url: 'https://www.maxima.lv',
-      timeFrame: 'April 2013 &ndash; August 2013',
-      desciption: 'Worked with suppliers, implemented sales promotions, prepared documentation and planograms'
-    },
-    {
-      position: 'Board Member',
-      employer: 'AIESEC Latvia',
-      url: 'http://aiesec.lv/',
-      timeFrame: 'April 2011 &ndash; December 2011',
-      desciption: 'Led sales team and coordinated incoming exchange program in Latvia'
+      timeFrame: 'January 2014 &ndash; June 2016',
+      desciption: 'Managed relations with several large, international companies in Baltic market and handled report preparation'
     }
   ],
 
@@ -471,7 +471,7 @@ var about = {
     textFooter: [
       {
         text: 'Made with love in Riga',
-        lastUpdate: 'November 27, 2017'
+        lastUpdate: 'August 12, 2019'
       }
     ]
   }
