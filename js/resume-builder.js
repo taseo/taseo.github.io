@@ -730,43 +730,44 @@ function displayProjects(projects) {
 
 function initMap(markers) {
 
-  var startLatLng = {
-    lat: 54.7002886,
-    lng: 25.112851
-  };
+  // TODO: temporary removed till cookie consent is added
+  // var startLatLng = {
+  //   lat: 54.7002886,
+  //   lng: 25.112851
+  // };
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: startLatLng,
-    scrollwheel: false,
-    zoom: 4
-  });
+  // var map = new google.maps.Map(document.getElementById('map'), {
+  //   center: startLatLng,
+  //   scrollwheel: false,
+  //   zoom: 4
+  // });
 
-  for (var mark in markers) {
+  // for (var mark in markers) {
 
-    if(markers.hasOwnProperty(mark)) {
+  //   if(markers.hasOwnProperty(mark)) {
       
-      var marker = new google.maps.Marker({
-        map: map,
-        position: {
-          lat: markers[mark].latitute,
-          lng: markers[mark].longtitute
-        },
-        title: markers[mark].title,
-        icon: markers[mark].icon
-      });
+  //     var marker = new google.maps.Marker({
+  //       map: map,
+  //       position: {
+  //         lat: markers[mark].latitute,
+  //         lng: markers[mark].longtitute
+  //       },
+  //       title: markers[mark].title,
+  //       icon: markers[mark].icon
+  //     });
 
-      marker.info = new google.maps.InfoWindow({
-        content: '<strong>' + markers[mark].title + '</strong>'
-      });
+  //     marker.info = new google.maps.InfoWindow({
+  //       content: '<strong>' + markers[mark].title + '</strong>'
+  //     });
 
-      google.maps.event.addListener(marker, 'click', function() {
+  //     google.maps.event.addListener(marker, 'click', function() {
         
-        this
-          .info
-          .open(map, this);
-      });
-    }
-  }
+  //       this
+  //         .info
+  //         .open(map, this);
+  //     });
+  //   }
+  // }
 }
 
 // Footer

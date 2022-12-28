@@ -84,20 +84,21 @@ $('.mobile-nav-icon').click(function() {
 
 function initMap() {
 
-    var startLatLng = { lat: 38.7320369, lng: -8.9756923 };
+    // TODO: temporary removed till cookie consent is added
+    // var startLatLng = { lat: 38.7320369, lng: -8.9756923 };
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: startLatLng,
-        scrollwheel: false,
-        zoom: 11
-    });
+    // var map = new google.maps.Map(document.getElementById('map'), {
+    //     center: startLatLng,
+    //     scrollwheel: false,
+    //     zoom: 11
+    // });
 
-    var marker = new google.maps.Marker({
-        map: map,
-        position: { lat: 38.7222524, lng: -9.1393366 },
-        title: "Omnifood Lisbon HQ",
-        icon: "https://maps.google.com/mapfiles/ms/icons/purple.png"
-    });
+    // var marker = new google.maps.Marker({
+    //     map: map,
+    //     position: { lat: 38.7222524, lng: -9.1393366 },
+    //     title: "Omnifood Lisbon HQ",
+    //     icon: "https://maps.google.com/mapfiles/ms/icons/purple.png"
+    // });
 }
 
 // ------------------------------------------------------------------------
