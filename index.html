@@ -1,26 +1,149 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Here be dragons</title>
+    <style>
+      :root {
+        --cirle-diameter: max(16vw, 8rem);
+        --box-size: max(2vw, 1rem);
+        --background-color: #101820;
+        --border-color: #e5e5e5;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Here be dragons</title>
-  <style>
-    body {
-      margin: 2rem;
-      font-family: sans-serif;
-      background-color: #071404;
-      color: #3FA236;
-    }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background-color);
+        font-family: sans-serif;
+      }
 
-    h1 {
-      margin: 0;
-    }
-  </style>
-</head>
+      .planet {
+        position: relative;
+        width: var(--cirle-diameter);
+        height: var(--cirle-diameter);
+        border: 1px solid var(--border-color);
+        border-radius: 50%;
+      }
 
-<body>
-  <h1>73</h1>
-</body>
+      .cube {
+        position: absolute;
+        top: calc(49% - var(--box-size) / 2);
+        left: calc(49% - var(--box-size) / 2);
+        width: var(--box-size);
+        height: var(--box-size);
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(0deg) translate(var(--cirle-diameter));
+        animation: rotate-around 16s linear infinite;
+        background-color: var(--background-color);
+        color: #fff;
+        font-size: calc(var(--box-size) * 0.5);
+        font-weight: 500;
+      }
 
+      .left-panel-0,
+      .left-panel-1,
+      .left-panel-2,
+      .right-panel-0,
+      .right-panel-1,
+      .right-panel-2 {
+        position: absolute;
+        width: calc(var(--box-size) / 2 - 1px);
+        height: calc(var(--box-size) / 2 - 2px);
+        border: 1px solid var(--border-color);
+        top: calc(var(--box-size) / 4);
+      }
+
+      .left-panel-0,
+      .left-panel-1,
+      .left-panel-2 {
+        border-right: none;
+      }
+
+      .left-panel-0 {
+        left: calc(var(--box-size) * -0.5);
+      }
+
+      .left-panel-1 {
+        left: calc(var(--box-size) * -1);
+      }
+
+      .left-panel-2 {
+        left: calc(var(--box-size) * -1.5);
+      }
+
+      .right-panel-0,
+      .right-panel-1,
+      .right-panel-2 {
+        border-left: none;
+      }
+
+      .right-panel-0 {
+        right: calc(var(--box-size) * -0.5);
+      }
+
+      .right-panel-1 {
+        right: calc(var(--box-size) * -1);
+      }
+
+      .right-panel-2 {
+        right: calc(var(--box-size) * -1.5);
+      }
+
+      @keyframes rotate-around {
+        0% {
+          transform: rotate(0deg) translate(var(--cirle-diameter));
+        }
+        100% {
+          transform: rotate(360deg) translate(var(--cirle-diameter));
+        }
+      }
+
+      .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(var(--cirle-diameter) * 2 - 4px);
+        height: calc(var(--cirle-diameter) * 2 - 4px);
+        border: 1px dashed #a9a9a9;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotate-orbit 16s linear infinite;
+        clip-path: polygon(72% 0, 100% 0, 100% 50%, 50% 50%);
+      }
+
+      @keyframes rotate-orbit {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="planet">
+      <div class="orbit"></div>
+      <div class="cube">
+        <div class="left-panel-0"></div>
+        <div class="left-panel-1"></div>
+        <div class="left-panel-2"></div>
+        73
+        <div class="right-panel-0"></div>
+        <div class="right-panel-1"></div>
+        <div class="right-panel-2"></div>
+      </div>
+    </div>
+  </body>
 </html>
